@@ -179,7 +179,7 @@ else
   hc_lib = static_library(meson.project_name(), libsrc, include_directories: includeDir, dependencies: liblibDeps, install: false)
   hc_dep = declare_dependency(link_with: hc_lib, include_directories: 'include')
   meson.override_dependency('libhappycrash', hc_dep)
-  meson.override_find_program('happycrash')
+  meson.override_find_program('happycrash', hc_app)
 endif
 
 
