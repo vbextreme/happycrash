@@ -7,6 +7,8 @@
 
 project('happycrash', 'c', version: '0.0.0', meson_version: '>= 1.1')
 
+project_arguments = ['-g', '-frecord-gcc-switches']
+
 cc = meson.get_compiler('c')
 localPath = meson.current_source_dir()
 
@@ -52,6 +54,7 @@ applibDeps += [ dependency('libelf', required: true) ]
 applibDeps += [ dependency('libdw', required: true) ]
 
 liblibDeps  = [ cc.find_library('m', required : true) ] # math
+liblibDeps += [ dependency('libelf', required: true) ]
 
 if get_option('testing')
   testlibDeps  = [ cc.find_library('happycrash', dirs: [ localPath + '/build' ], static: true, required : true) ]
