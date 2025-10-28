@@ -177,6 +177,9 @@ if get_option('testing')
 else
   hc_app = executable(meson.project_name(), appsrc, include_directories: includeDir, dependencies: applibDeps, install: false)
   hc_lib = static_library(meson.project_name(), libsrc, include_directories: includeDir, dependencies: liblibDeps, install: false)
+  hc_dep = declare_dependency(link_with: hc_lib, include_directories: 'include')
+  meson.override_dependency('libhappycrash', hc_dep)
+  meson.override_find_program('happycrash')
 endif
 
 
