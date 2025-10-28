@@ -1,0 +1,5 @@
+option('eveloper', type: 'boolean', value: false, description: 'set developer mode')
+option('optimize', type: 'string', value: 'none', description: 'enable optimization')
+option('openmp', type: 'boolean', value: false, description: 'enable openmp')
+option('testing', type: 'boolean', value: false, description: 'internal use for testing software')
+
