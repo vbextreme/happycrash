@@ -9,6 +9,7 @@
 #define HAPPYCRASH_BUILDARG_SIZE  1024
 #define HAPPY_SKIP     0x01
 #define HAPPY_SEGFAULT 0x02
+#define HAPPY_FULL     0xFF
 
 #include <stdint.h>
 #include <stdlib.h>
