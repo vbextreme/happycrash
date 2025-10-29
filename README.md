@@ -104,7 +104,7 @@ custom_target('happycrash',
   output: meson.project_name(),
   install: true,
   install_dir: get_option('bindir'),
-  command: [ hc, '--version', '1.2.3', '-s', '-e' , '@INPUT@', '-o', '@OUTPUT@' ]
+  command: [ happycrash_app, '--version', '1.2.3', '-s', '-e' , '@INPUT@', '-o', '@OUTPUT@' ]
 )
 
 ```
